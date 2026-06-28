@@ -24,11 +24,18 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            // R8/ProGuard minification is intentionally disabled because
+            // epublib-core 3.1 transitively pulls in net.sf.kxml:kxml2:2.3.0
+            // which ships org/xmlpull/v1/*.class files that collide with
+            // Android's android.content.res.XmlResourceParser implementation.
+            // (See proguard-rules.pro for the rationale.)
+            // The release APK is debug-signed so it installs on user devices.
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
         debug {
             isMinifyEnabled = false

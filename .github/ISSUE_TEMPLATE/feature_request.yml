@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest an idea for LocalReader
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what problem you would like to solve and how you imagine the
+        solution. We love concrete use cases over generic wish lists.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem are you trying to solve? Describe the user pain point clearly.
+      placeholder: I want to read across multiple devices but LocalReader does not sync progress because it is offline-only.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Desired Solution
+      description: Describe the solution you have in mind. Include UI sketches or flow notes if helpful.
+      placeholder: Add an opt-in WebDAV sync that uploads reading progress to the user's own server, with LocalReader remaining fully offline by default.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Other approaches you considered, and why you think this one is best.
+      placeholder: I also considered exporting a JSON progress file, but that requires manual effort and would not feel seamless.
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Links, mockups, references, or related Issues. Anything that helps us evaluate the request.
+    validations:
+      required: false

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LocalReader</string>
+    <string name="tab_bookshelf">Bookshelf</string>
+    <string name="tab_statistics">Statistics</string>
+    <string name="tab_profile">Profile</string>
+    <string name="import_books">Import books</string>
+    <string name="no_books">No books on shelf</string>
+    <string name="reading_progress">Reading progress</string>
+    <string name="total_reading_time">Total reading time</string>
+    <string name="completed_books">Books completed</string>
+    <string name="settings">Settings</string>
+    <string name="theme_settings">Theme settings</string>
+    <string name="font_import">Font import</string>
+    <string name="reading_settings">Reading settings</string>
+    <string name="background_color">Background color</string>
+    <string name="custom_background">Custom background</string>
+    <string name="font_size">Font size</string>
+    <string name="font_family">Font family</string>
+    <string name="save_progress">Save progress</string>
+    <string name="nickname">Nickname</string>
+    <string name="edit_nickname">Edit nickname</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+    <string name="system_theme">Follow system</string>
+</resources>

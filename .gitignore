@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+**/build/
+local.properties
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+captures/
+
+# Kotlin
+.kotlin/
+
+# Keystore (signing secrets)
+*.jks
+*.keystore
+keystore.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.hprof
+.cxx/
+.sisyphus/
+
+# Coverage / test outputs
+*.gcda
+*.gcno
+*.ec

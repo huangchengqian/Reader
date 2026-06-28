@@ -1,0 +1,102 @@
+name: Bug Report
+description: Report a bug to help us improve LocalReader
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug report. Please fill in the sections below so we
+        can reproduce and fix the issue quickly. Replace this block with your
+        description.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: The MOBI book I imported does not show chapter titles in the reader.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Numbered steps that trigger the bug. Include the sample book type if relevant.
+      placeholder: |
+        1. Open the Bookshelf tab.
+        2. Tap Import books and pick `example.mobi`.
+        3. Tap the book to open the Reader screen.
+        4. Scroll to chapter 3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include error messages if any.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: LocalReader Version
+      description: Which version of LocalReader are you running?
+      options:
+        - "2.1.0"
+        - "2.0.0"
+        - "Earlier"
+    validations:
+      required: true
+
+  - type: textarea
+    id: device
+    attributes:
+      label: Device and Platform
+      description: Device model, Android version, and any custom ROM details. Markdown is supported.
+      placeholder: |
+        - Device: Pixel 7
+        - Android: 14 (stock)
+        - LocalReader: 2.1.0 (versionCode 13)
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Log Output
+      description: Paste `adb logcat` output from the time of the crash. Wrap it in a fenced code block.
+      render: shell
+      placeholder: |
+        ```
+        04-12 10:33:14.221  1234  1234 E AndroidRuntime: FATAL EXCEPTION: main
+        04-12 10:33:14.221  1234  1234 E AndroidRuntime: Process: com.localreader, PID: 1234
+        ```
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: attachments
+    attributes:
+      label: Attachments
+      description: If you have a sample book that triggers the bug, attach it below.
+      options:
+        - label: I will attach a sample book or screenshot.
+          required: false
+
+  - type: input
+    id: attachment
+    attributes:
+      label: Attachment URL (optional)
+      description: Paste a link to a sample EPUB / MOBI or a screenshot. Avoid uploading copyrighted material directly to the issue.
